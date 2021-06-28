@@ -10,4 +10,4 @@ export const unavailable =
 
 // For Carousel
 export const noPicture =
-  "http://placehold.jp/35/bfbbbb/ffffff/300x450.png?text=No%20Picture";
+  "https://placehold.jp/35/bfbbbb/ffffff/300x450.png?text=No%20Picture";
