@@ -1,0 +1,11 @@
+.app {
+    min-height: 95vh;
+    background-color: #181c33;
+    padding-top: 20px;
+}
+
+.content-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

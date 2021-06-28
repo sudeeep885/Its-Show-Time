@@ -1,0 +1,25 @@
+# dependencies
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
+
+# testing
+/frontend/coverage
+
+# production
+/frontend/build
+/frontend/.env
+
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# python
+/ItsShowTime/__pycache__
+/backend/__pycache__
+/backend/migrations
+/db.sqlite3
+/.env
+
+# misc
+.vscode

@@ -1,0 +1,15 @@
+.root {
+    padding: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.chip {
+    margin: 2.5px;
+    color: #8cb5ed;
+}
+
+svg.MuiChip-deleteIcon {
+    color: #8cb5ed;
+}
