@@ -2,12 +2,7 @@
     height: 600px;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    /* background-position: right -200px top !important; */
-}
-
-.gradient-layer {
-    height: 600px;
-    background-image: linear-gradient(to right, rgb(13 19 19) 150px, rgb(129 171 171 / 84%) 100%);
+    background-position: top !important;
 }
 
 .poster-img {
