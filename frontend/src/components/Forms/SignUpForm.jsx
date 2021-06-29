@@ -22,7 +22,7 @@ const SignUpForm = () => {
   const classes = useStyles();
 
   const[formData, setFormData] = useState({
-    first_name: '', second_name: '', email: '', password: ''
+    first_name: '', second_name: '', email: '', password: '', phone_number: '', age: ''
   });
   // const [cpass, setCpass] = useState('');
   const [isSucess, setIsSuccess] = useState(false);
@@ -132,6 +132,28 @@ const SignUpForm = () => {
               onChange={cpassHandler}
             />
           </Grid> */}
+          <Grid item xs={6}>
+            <TextField
+              className={classes.textfield}
+              label="Age"
+              name="age"
+              variant="outlined"
+              type="number"
+              value={formData.age}
+              onChange={changeHandler}
+            />
+          </Grid>
+        <Grid item xs={6}>
+            <TextField
+              className={classes.textfield}
+              label="Phone Number"
+              name="phone_number"
+              variant="outlined"
+              type="integer"
+              value={formData.phone_number}
+              onChange={changeHandler}
+            />
+          </Grid>
         </Grid>
         <span className={classes.heading}><Button onClick={handleSubmit} variant="contained" color="primary">Register</Button></span>
         {/* <Alert onClose={() => {}}>This is a success alert — check it out!</Alert> */}
