@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <a href="https://its-show-time.netlify.app/">
+    <img src="https://github.com/sudeeep885/Its-Show-Time/blob/main/frontend/src/2_objects.png?raw=true" alt="its-logo" align="right">
+  </a>
 
-## Available Scripts
+# IT'S SHOW TIME
 
-In the project directory, you can run:
+<p>
+  A Full-Stack webApp made using React for front-end and Django for back-end. It uses The Movie Database API extensively for fetching the content. Users can view Trending as well as search for specific Movies/Tv Series and filter content by genres. The JWT Authentication system safely manages user's accounts. A new user also receives a acoount-confirmation mail to his/her email-id. Logged-in users have the functionality to add movies and series in their watchlists.
+</p>
 
-### `npm start`
+## Table of content
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Directory Structure](#directory-structure)
+- [Getting Started](#getting-started)
+- [Features](#features)
+  - [Sign-Up Form](#sign-up-form)
+  - [Log-In Form](#log-in-form)
+  - [Trending Content](#trending-content)
+  - [Filter Content by Genres](#filter-content-by-genres)
+  - [Watchlist Overview](#watchlist-overview)
+  - [Search](#search)
+- [To Add List](#to-add-list)
+- [Links](#links)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Directory Structure
 
-### `npm test`
+```
+├── ItsShowTime/
+│   ├── settings.py
+│   └── urls.py
+│
+├── backend/
+│   ├── models.py
+│   ├── serializers.py
+│   └── views.py
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├──components/
+│   │   ├──config/
+│   │   ├──hooks/
+│   │   ├──pages/
+│   │   ├──Apps.js
+│   │   └──index.js
+│   └── package.json
+│
+└── manage.py
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+  To run this app on your machine follow the below steps:
+  1. Run ``` git clone https://github.com/sudeeep885/Its-Show-Time.git```
+  2. Create .env file for django in the root directory and add following values.
+``` 
+  SECRET_KEY = <your_secret_key_here>
+  EMAIL_HOST_USER = <gmail_id_from_which_the_user_will_get_confirmation_mail>
+  EMAIL_HOST_PASSWORD = <password_of_above_email_id> 
+```
+  3. Run the following commands to start the django server.
+```
+  python manage.py makemigrations
+  python manage.py migrate
+  python manage.py runserver
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  4. CD into frontend directory and create another .env file for react and add following values.
+``` 
+  REACT_APP_API_KEY = <your_the_movie_database_api_key>
+  REACT_APP_BACKEND_BASE_URL = http://127.0.0.1:8000/auth/
+```
+  5. Run ```npm run start``` to start the server for react.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+#### Sign-Up Form
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Log-In Form
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Trending Content
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Filter Content by Genres
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Watchlist Overview
 
-## Learn More
+#### Search
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## To Add List
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Links
