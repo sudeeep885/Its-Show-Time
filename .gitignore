@@ -23,3 +23,7 @@
 
 # misc
 .vscode
+
+/env
+
+.env

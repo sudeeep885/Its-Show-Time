@@ -126,8 +126,8 @@ const DetailedView = ({setLoginDetail}) => {
             <div className='custom-bg' style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${detail.backdrop_path ? bgURL+detail.backdrop_path : null})`}}>
                 <div className='banner-content'>
                   <Typography className='banner-heading' display='inline' variant='h2'>{detail.title || detail.name} {detail.tagline && '|'}</Typography>{detail.tagline && <span className='banner-tagline' style={{fontSize: 28, marginLeft: 9}}>{detail.tagline}</span>}
-                  <div className='banner-rating'><Rating name="read-only" value={detail.vote_average/2} precision={0.5} readOnly />({Math.round(detail.vote_average/2)})</div>
-                  <Typography className='banner-info' style={{paddingTop: 10}} gutterBottom variant='h6'>{detail.release_date || detail.first_air_date} | {detail.genres && detail.genres.map((e) => e.name).reduce((acc, curr) => (acc + ', ' + curr))} | {detail.runtime ? detail.runtime + ' min' : detail.episode_run_time + ' episodes'}</Typography>
+                  <div className='banner-rating'><Rating name="read-only" value={detail.vote_average/2} precision={0.5} readOnly />({detail.vote_count + ' votes'})</div>
+                  <Typography className='banner-info' style={{paddingTop: 10}} gutterBottom variant='h6'>{detail.release_date || detail.first_air_date} | {detail.genres && detail.genres.map((e) => e.name).reduce((acc, curr) => (acc + ', ' + curr))} | {detail.runtime ? `${Math.floor(detail.runtime / 60)}h ${detail.runtime % 60}m` : `${detail.number_of_seasons} Seasons ${detail.number_of_episodes} episodes`}</Typography>
                   <Typography variant='subtitle2'>{detail.overview}</Typography>
                 </div>
                 <div className='banner-btns'>
